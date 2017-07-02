@@ -35,9 +35,11 @@
 	
 ## Code Flow: <a name="codeflow"></a>
 
-	The code cordination happens in main.cpp then wait for Simulator to start once the connections is established then it starts the process flow described below. main.cpp calls FusionEFK.cpp to make initilization, update, and predictions and update and prediction logic are implemented in kalman_filter.cpp. tools.cpp has an implementation of RMSE and Jacobian matrix.  
+	The code cordination happens in main.cpp then wait for Simulator to start once the connections is established
+	then it starts the process flow described below. main.cpp calls FusionEFK.cpp to make initilization, update, and predictions and update and prediction logic are implemented in kalman_filter.cpp. tools.cpp has an implementation of RMSE 
+	and Jacobian matrix.  
 
-![](/home/oucler/Classes/Udacity/Term2/Extended-Kalman-Filter/images/CodeFlow.png) 
+![](images/CodeFlow.png) 
 
 ## Measurement Process: <a name="measurement"></a>
 
@@ -47,7 +49,7 @@
    **update**: the filter compares the "predicted" location with what the sensor measurement says. The predicted location and the measured location are combined to give an updated location. The Kalman filter will put more weight on either the predicted location or the measured location depending on the uncertainty of each value then the car will receive another sensor measurement after a time period Δt. The algorithm then does another predict and update step.
 
 
-![](/home/oucler/Classes/Udacity/Term2/Extended-Kalman-Filter/images/ekf_flow.jpg) 
+![](images/ekf_flow.jpg) 
 
 ## Lidar measurement: <a name="lidar"></a>
 
@@ -55,7 +57,7 @@
 
 	- H is the matrix that projects your belief about the object current state into the measurement space of the sensor. For lidar, this is a fancy way of saying that we discard velocity information from the state variable since the lidar sensor only measures position: The state vector x contains information about [p​x​​,p​y​​,v​x​​,v​y​​] whereas the z vector will only contain [px,py]. Multiplying Hx allows us to compare x, our belief, with z, the sensor measurement.
 
-![](/home/oucler/Classes/Udacity/Term2/Extended-Kalman-Filter/images/lidar.jpg) 
+![](images/lidar.jpg) 
 
 ## Radar measurement: <a name="radar"></a>
 
@@ -64,7 +66,7 @@
 	- φ=atan(p​y​​/p​x​​). Note that φ is referenced counter-clockwise from the x-axis, so φ from the video clip above in that situation would actually be negative.
 	- The range rate, ​ρ​˙​​, is the projection of the velocity, v, onto the line, L.
 
-![](/home/oucler/Classes/Udacity/Term2/Extended-Kalman-Filter/images/radar.jpg) 
+![](images/radar.jpg) 
 
 ## References: <a name="references"></a>
 	1. https://github.com/JunshengFu/tracking-with-Extended-Kalman-Filter
