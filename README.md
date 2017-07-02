@@ -18,10 +18,10 @@
 ## Results: <a name="results"></a>
 
 - Dataset 1
-![](/home/oucler/Classes/Udacity/Term2/commit/Extended-Kalman-Filter/images/Result_Dataset1.PNG) 
+![](images/Result_Dataset1.PNG) 
 
 - Dataset 2
-![](/home/oucler/Classes/Udacity/Term2/Extended-Kalman-Filter/images/Result_Dataset2.png) 
+![](images/Result_Dataset2.png) 
 ## How to run: <a name="howto"></a>
 
 	Perform steps following:
