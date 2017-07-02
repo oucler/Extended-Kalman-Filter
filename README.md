@@ -36,8 +36,9 @@
 ## Code Flow: <a name="codeflow"></a>
 
 	The code cordination happens in main.cpp then wait for Simulator to start once the connections is established
-	then it starts the process flow described below. main.cpp calls FusionEFK.cpp to make initilization, update, and predictions and update and prediction logic are implemented in kalman_filter.cpp. tools.cpp has an implementation of RMSE 
-	and Jacobian matrix.  
+	then it starts the process flow described below. main.cpp calls FusionEFK.cpp to make initilization, update, 
+	and predictions and update and prediction logic are implemented in kalman_filter.cpp. tools.cpp has an implementation 
+	of RMSE and Jacobian matrix.  
 
 ![](images/CodeFlow.png) 
 
